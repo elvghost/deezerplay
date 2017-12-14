@@ -7,13 +7,6 @@
 <div id="dz-root"></div>
 <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
 <script>
-        DZ.init({
-                appId  : '264422',
-                channelUrl : 'https://elvghost.github.io/deezerplay/channel.html'
-        });
-	DZ.ready(function(sdk_options){
-	console.log('DZ SDK is ready', sdk_options); 
-	});
 	DZ.login(function(response) {
 	if (response.authResponse) {
 		console.log('Welcome!  Fetching your information.... ');
@@ -24,6 +17,21 @@
 		console.log('User cancelled login or did not fully authorize.');
 	}
 }, {perms: 'basic_access,email'});
+        DZ.init({
+                appId  : '264422',
+                channelUrl : 'https://elvghost.github.io/deezerplay/channel.html'
+		player: {
+			container: 'player',
+			width : 800,
+			height : 300,
+			onload : function(){}
+		}
+        });
+	DZ.ready(function(sdk_options){
+	console.log('DZ SDK is ready', sdk_options); 
+	});
+	
+	
 </script>
 
 </body>
