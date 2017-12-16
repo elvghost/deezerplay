@@ -27,7 +27,39 @@
 	
 	
 </script>
+	<div class="options">
+			<h2>Create your widget</h2>
+			<br />
 
+			<h4>1. Pick the Deezer music you want to play in your website:</h4>
+			<input type="hidden" id="type" value="playlist"/>
+			<div id="widget-tabs">
+				<ul class="menu" style="margin-bottom:0;">
+					<li class="selected"><a href="#tabs-playlist" type="playlist">Playlist</a></li>
+					<li ><a id="albumTab" href="#tabs-album" type="album">Album</a></li>
+					<li ><a id="tracksTab" href="#tabs-tracks" type="tracks">Tracks</a></li>
+					<li ><a id="podcastTab" href="#tabs-podcast" type="podcast">Podcast</a></li>
+					<li ><a id="episodesTab" href="#tabs-episodes" type="episodes">Episodes</a></li>
+					<li ><a href="#tabs-radio" type="radio">Mix</a></li>
+					<li ><a href="#tabs-artist" type="artist">Artist</a></li>
+					<li ><a href="#tabs-charts" type="charts">Charts</a></li>
+					<li ><a href="#tabs-favorites" type="favorites">User</a></li>
+					<div class="clr"></div>
+				</ul>
+				<div class="clr"></div>
+				<div id="tabs-playlist" class="tab">
+				<ul class="generator">
+				<li>
+				<div class="floatl">
+				<span class="form_name" style="width:auto;padding-top:4px;">PlaylistID:</span><input type="text" id="id_playlist" value="30595446" onBlur="dzmusicplugin.pluginUpdateParam('player', this);" style="width:100px;"/>
+				</div>
+				<div class="floatl" style="padding:3px;margin-left: 10px;margin-right: 10px;">
+					<b>or</b>
+				</div>
+				<div class="floatl">
+				<span class="form_name" style="width:auto;padding-top:4px;">My Playlists:</span>
+			<select onchange="if(this.value!='')$('#id_playlist').val(this.value);dzmusicplugin.pluginUpdateParam('player', this);" style="width:265px;">
+	
 </body>
 
 </html>
